@@ -24,16 +24,15 @@ Connect your [Semaphore][semaphoreci.com] workflows to [BuildPulse][buildpulse.i
             always: # Run these commands even when the tests fail
               commands:
                 # Upload test results to BuildPulse for flaky test detection
-                - export BUILDPULSE_ACCOUNT_ID=<buildpulse-account-id>
-                - export BUILDPULSE_REPOSITORY_ID=<buildpulse-repository-id>
-                - export BUILDPULSE_REPORT_PATH=<path-to-directory-containing-xml-reports>
-                - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Workshop64/buildpulse-semaphore/master/uploader-for-ubuntu.sh)"
+                - curl -fsSL https://github.com/buildpulse/test-reporter/releases/latest/download/test-reporter-linux-amd64 > ./buildpulse-test-reporter
+                - chmod +x ./buildpulse-test-reporter
+                - ./buildpulse-test-reporter submit <path> --account-id <buildpulse-account-id> --repository-id <buildpulse-repository-id>
           secrets:
             - name: buildpulse-credentials
     ```
 
-5. In your workflow file, replace `<buildpulse-account-id>` and `<buildpulse-repository-id>` with your account ID and repository ID from [buildpulse.io][]
-6. Also in your workflow file, replace `<path-to-directory-containing-xml-reports>` with the actual path containing the XML reports for your test results
+5. In your workflow file, replace `<path>` with the actual path containing the XML reports for your test results
+6. Also in your workflow file, replace `<buildpulse-account-id>` and `<buildpulse-repository-id>` with your account ID and repository ID from [buildpulse.io][]
 
 [buildpulse.io]: https://buildpulse.io
 [semaphoreci.com]: https://semaphoreci.com
