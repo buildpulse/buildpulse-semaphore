@@ -2,6 +2,15 @@
 
 set -e
 
+# --- This script is deprecated.
+# --- Please upgrade to the BuildPulse Test Reporter for a faster experience!
+echo "📣👋📰 A faster BuildPulse integration is now available"
+echo "📣👋📰"
+echo "📣👋📰 Upgrade to the BuildPulse Test Reporter"
+echo "📣👋📰"
+echo "📣👋📰 See details at https://github.com/Workshop64/buildpulse-semaphore"
+echo
+
 if [ -z "$BUILDPULSE_ACCESS_KEY_ID" ]
 then
   echo "🐛 BUILDPULSE_ACCESS_KEY_ID is missing."
