@@ -8,7 +8,7 @@ echo "📣👋📰 A faster BuildPulse integration is now available"
 echo "📣👋📰"
 echo "📣👋📰 Upgrade to the BuildPulse Test Reporter"
 echo "📣👋📰"
-echo "📣👋📰 See details at https://github.com/Workshop64/buildpulse-semaphore"
+echo "📣👋📰 See details at https://github.com/buildpulse/buildpulse-semaphore"
 echo
 
 if [ -z "$BUILDPULSE_ACCESS_KEY_ID" ]
