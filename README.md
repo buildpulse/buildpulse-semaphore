@@ -1,4 +1,4 @@
-# Semaphore CI Integration for BuildPulse [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/Workshop64/buildpulse-semaphore/master/LICENSE)
+# Semaphore CI Integration for BuildPulse [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/buildpulse/buildpulse-semaphore/master/LICENSE)
 
 Connect your [Semaphore][semaphoreci.com] workflows to [BuildPulse][buildpulse.io] to help you identify and eliminate flaky tests.
 
